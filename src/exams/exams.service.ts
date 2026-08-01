@@ -11,20 +11,14 @@ export class ExamsService {
   list(schoolId: string) {
     return this.prisma.exam.findMany({
       where: { schoolId },
+      
       orderBy: { createdAt: 'desc' },
-      include: {
-  subjects: {
-    include: {
-      _count: {
-        select: {
-          marks: true,
-        },
-      },
-    },
-  },
-
+include: {
+  subjects: true,
+},
+    
   });
-  }
+}
 
   async create(schoolId: string, dto: CreateExamDto) {
     return this.prisma.exam.create({
