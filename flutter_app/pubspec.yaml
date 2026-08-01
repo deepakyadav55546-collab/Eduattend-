@@ -1,0 +1,15 @@
+name: eduattend
+description: EduAttend - All-in-One Education Management Platform
+publish_to: "none"
+version: 14.0.0+14
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.2.2
+
+flutter:
+  uses-material-design: true
