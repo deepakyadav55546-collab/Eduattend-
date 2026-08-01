@@ -171,7 +171,7 @@ model Teacher {
   school     School       @relation(fields: [schoolId], references: [id], onDelete: Cascade)
   user       User?        @relation(fields: [userId], references: [id], onDelete: SetNull)
   sections   Section[]
-  attendance Attendance[]  @relation("MarkedBy")
+  
 
   @@unique([schoolId, employeeNo])
   @@index([schoolId])
