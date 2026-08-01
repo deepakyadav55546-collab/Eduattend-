@@ -51,6 +51,7 @@ model School {
   parents   Parent[]
   teachers  Teacher[]
   attendance Attendance[]
+notifications Notification[]
 }
 
 model User {
@@ -240,7 +241,7 @@ model Exam {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   subjects  ExamSubject[]
-  marks     ExamMark[]
+
   @@index([schoolId])
 }
 
